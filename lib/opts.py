@@ -10,6 +10,13 @@ class Opts(object):
             "help" : "Targeted url.",
             "required" : True
         },
+        "success_str" : {
+            "long_param" : "--on-success",
+            "short_param" : "-s",
+            "type" : str,
+            "help" : "Displayed string on upload success.",
+            "required" : True
+        },
         "verbosity" : {
             "long_param" : "--verbosity",
             "short_param" : "-v",

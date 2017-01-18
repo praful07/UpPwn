@@ -1,4 +1,5 @@
-from lib.flaws.contentType import ContentType
+from lib.flaws.extension import Extension
+from lib.seleniumManager import SeleniumMng
 
 class Core(object):
 
@@ -6,10 +7,15 @@ class Core(object):
         #print opts
         self.target_url = opts.url
         self.verbosity = opts.verbosity
+        self.seleniumMng = SeleniumMng(opts.on_success, self.target_url)
 
 
     def run(self):
         print "UpPwn is running.."
+        print "Scan potential vulnerabilities with:"
+        extension = Extension(self.seleniumMng)
+        print "\t- " + extension.name + ":"
+        extension.scan()
 
 
 
