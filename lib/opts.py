@@ -1,22 +1,30 @@
-import argparse
+
+import argparse, json
 
 class Opts(object):
 
     data_opts = {
-        "url" : {
-            "long_param" : "--url",
-            "short_param" : "-u",
-            "type" : str,
-            "help" : "Targeted url.",
-            "required" : True
-        },
-        "success_str" : {
-            "long_param" : "--on-success",
+        "scenario" : {
+            "long_param" : "--scenario",
             "short_param" : "-s",
             "type" : str,
-            "help" : "Displayed string on upload success.",
+            "help" : "Selenium python script.",
             "required" : True
         },
+        "cookies" : {
+            "long_param" : "--cookies",
+            "short_param" : "-c",
+            "type" : json.loads,
+            "help" : "Cookies need to access upload form.",
+            "required" : False
+        },
+#        "success_str" : {
+#            "long_param" : "--on-success",
+#            "short_param" : "-s",
+#            "type" : str,
+#            "help" : "Displayed string on upload success.",
+#            "required" : True
+#        },
         "verbosity" : {
             "long_param" : "--verbosity",
             "short_param" : "-v",
@@ -53,4 +61,3 @@ class Opts(object):
 
     def parse(self):
         return self.parser.parse_args()
-    #def usage(self):
