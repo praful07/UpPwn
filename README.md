@@ -19,7 +19,7 @@ Testing is done only with [GNU/Linux Ubuntu](http://www.ubuntu.com/) 16.04 LTS s
     pip install --upgrade pip
     git clone https://github.com/ferrery1/UpPwn.git && cd UpPwn
     pip2 install -r requirements.lst
-    tar -zxvf firefox_profile.up.tar.gz
+    tar -zxvf misc/firefox_profile.up.tar.gz -C misc/
 
 ## Usage
 
