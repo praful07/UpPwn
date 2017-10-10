@@ -41,11 +41,3 @@ class Scenario(object):
 
     def has_succeeded(self):
         return self.success
-
-
-#if __name__ == '__main__':
-#    cookies = {"spip_session":"5240_e298e98ef6d73ac6c7a564e68247cdb7"}
-#    up_s = Scenario("../tests_files/scenario_rootme.py")
-#    up_s.build(cookies)
-#    up_s.load()
-#    up_s.run()
